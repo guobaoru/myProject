@@ -11,7 +11,8 @@ public class HashTest {
     public static void main(String[] args) {
 
         HashMap hashMap = new HashMap();
-        String a = "hello";String b = "hello";
+        String a = "hello";
+        String b = "hello";
         StringBuffer stringBuffer = new StringBuffer();
         Vector vector = new Vector();
 

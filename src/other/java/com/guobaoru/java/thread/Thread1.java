@@ -7,7 +7,7 @@ package com.guobaoru.java.thread;
 public class Thread1 implements Runnable {
     @Override
     public void run() {
-        for (int i = 0 ;i < 10 ; i++) {
+        for (int i = 0; i < 10; i++) {
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {

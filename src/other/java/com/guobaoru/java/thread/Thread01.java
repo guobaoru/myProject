@@ -15,11 +15,11 @@ public class Thread01 implements Runnable {
     @Override
     public void run() {
 
-        System.out.println(Thread.currentThread().getName()+" 进入Run方法");
+        System.out.println(Thread.currentThread().getName() + " 进入Run方法");
 
         synchronized (this) {
-            for(int i=0;i<3;i++){
-                System.out.println(Thread.currentThread().getName()+" synchronized loop "+i);
+            for (int i = 0; i < 3; i++) {
+                System.out.println(Thread.currentThread().getName() + " synchronized loop " + i);
             }
         }
     }
@@ -29,8 +29,8 @@ public class Thread01 implements Runnable {
 
         System.out.println("synchronized 关键字使用 \n--------------------------");
 
-        Thread ta = new Thread(t01,"A");
-        Thread tb = new Thread(t01,"B");
+        Thread ta = new Thread(t01, "A");
+        Thread tb = new Thread(t01, "B");
 
         ta.start();
         tb.start();

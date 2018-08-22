@@ -1,7 +1,8 @@
 package com.guobaoru.algorithm.tree.binaryTree;
+
 //初始化一个二叉树
 public class TreeFactory {
-    public static BinaryTree getBinaryTree(){
+    public static BinaryTree getBinaryTree() {
         BinaryTree treeRoot = new BinaryTree(0);
         BinaryTree tree1 = new BinaryTree(1);
         BinaryTree tree2 = new BinaryTree(2);

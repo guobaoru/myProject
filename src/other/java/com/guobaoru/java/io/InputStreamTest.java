@@ -31,10 +31,10 @@ public class InputStreamTest {
             BufferedInputStream bufferedInputStream3 = new BufferedInputStream(fileInputStream);
 
             // 字符流，联通字节流的桥梁，可以通过字节流包括其他子类进行创建
-            InputStreamReader inputStreamReader = new InputStreamReader(inputStream,"GBK");
-            InputStreamReader inputStreamReader2 = new InputStreamReader(fileInputStream,"GBK");
-            InputStreamReader inputStreamReader3 = new InputStreamReader(byteArrayInputStream,"GBK");
-            InputStreamReader inputStreamReader4 = new InputStreamReader(bufferedInputStream,"GBK");
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "GBK");
+            InputStreamReader inputStreamReader2 = new InputStreamReader(fileInputStream, "GBK");
+            InputStreamReader inputStreamReader3 = new InputStreamReader(byteArrayInputStream, "GBK");
+            InputStreamReader inputStreamReader4 = new InputStreamReader(bufferedInputStream, "GBK");
 
             // 字符流，可直接读取file的字节流
             FileReader fileReader = new FileReader("D:\\test1.csv");

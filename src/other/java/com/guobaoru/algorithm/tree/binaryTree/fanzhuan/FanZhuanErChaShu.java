@@ -20,6 +20,7 @@ public class FanZhuanErChaShu {
         if (root.rightNode != null)
             Mirror(root.rightNode);
     }
+
     public static void main(String[] args) {
         BinaryTree tree = TreeFactory.getBinaryTree();
         Bianli.preorder(tree);

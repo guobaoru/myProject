@@ -22,7 +22,7 @@ public class ThreadMain {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized(ThreadMain.class){
+                synchronized (ThreadMain.class) {
                     try {
                         ThreadMain.class.wait();
                     } catch (InterruptedException e) {
@@ -37,7 +37,7 @@ public class ThreadMain {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized(ThreadMain.class){
+                synchronized (ThreadMain.class) {
                     ThreadMain.class.notify();
                     System.out.println("wait2");
                 }
@@ -51,12 +51,12 @@ public class ThreadMain {
          */
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 5, 10, TimeUnit.MINUTES, new ArrayBlockingQueue<Runnable>(5));
 
-        for (int i = 0 ; i < 15 ; i++) {
+        for (int i = 0; i < 15; i++) {
             threadPoolExecutor.execute(new Thread1());
         }
     }
 
 
-
-    public synchronized void test() {}
+    public synchronized void test() {
+    }
 }

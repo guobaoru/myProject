@@ -14,18 +14,18 @@ public class Fibonacci {
     }
 
     //递归
-    public static long fibo1(long n){
+    public static long fibo1(long n) {
 
-        if(n <= 2){
+        if (n <= 2) {
             return deal0to2(n);
         }
         return fibo1(n - 1) + fibo1(n - 2);
     }
 
     //循环
-    public static long fibo2(long n){
+    public static long fibo2(long n) {
 
-        if(n <= 2){
+        if (n <= 2) {
             return deal0to2(n);
         }
 
@@ -41,8 +41,8 @@ public class Fibonacci {
     }
 
     //处理小于台阶数等于2的返回值
-    private static long deal0to2(long n){
-        if (n <= 0){
+    private static long deal0to2(long n) {
+        if (n <= 0) {
             return 0;
         } else {
             return n;

@@ -9,23 +9,22 @@ public class Test {
         Thread thread2 = new Thread(test2);
         thread.start();
         thread2.start();
-
     }
-
-
 }
-class Test1 implements Runnable{
+
+class Test1 implements Runnable {
     @Override
     public void run() {
-        for(int i = 0;i<100;i++){
+        for (int i = 0; i < 100; i++) {
             System.out.println(i);
         }
     }
 }
-class Test2 implements Runnable{
+
+class Test2 implements Runnable {
     @Override
     public void run() {
-        for(int i = 0;i<100;i++){
+        for (int i = 0; i < 100; i++) {
             System.out.println(i);
         }
     }
