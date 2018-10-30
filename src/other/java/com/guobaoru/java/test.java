@@ -22,5 +22,14 @@ public class test {
         System.out.println(d);
 
 
+        System.out.println("lalallalallala");
+
+
+        double a = 21.13;
+
+
+        System.out.println("aaksdhjgfask");
+
+
     }
 }
