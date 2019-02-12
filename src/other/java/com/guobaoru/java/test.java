@@ -3,11 +3,14 @@ package com.guobaoru.java;
 import org.omg.PortableInterceptor.INACTIVE;
 
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author Created by guobaoru.
@@ -17,19 +20,18 @@ public class test {
 
     public static void main(String[] args) throws ParseException {
 
-        double d = 40.1131231;
-        d = (double) Math.round(d * 100) / 100;
-        System.out.println(d);
+
+        String a = "123" + "456";
+
+        System.out.println(a);
 
 
-        System.out.println("lalallalallala");
 
+    }
 
-        double a = 21.13;
-
-
-        System.out.println("aaksdhjgfask");
-
-
+    public static Double convertCurrencyUnit(Double original, Double diffMultiplier) {
+        BigDecimal ogl = new BigDecimal(original.toString());
+        BigDecimal unit = new BigDecimal(diffMultiplier.toString());
+        return ogl.divide(unit,10, BigDecimal.ROUND_HALF_UP).doubleValue();
     }
 }

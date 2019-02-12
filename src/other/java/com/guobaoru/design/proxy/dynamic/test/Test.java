@@ -15,7 +15,7 @@
 // * @author Created by guobaoru.
 // * @create on 2018/9/19.
 // */
-//public class Test {
+//public class GbrFutureTask {
 //    public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
 //        String rt = "\r\n";
 //        String proxy =
