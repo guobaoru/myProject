@@ -1,6 +1,7 @@
 package com.guobaoru.java.lambda;
 
 import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * @author Created by guobaoru.
@@ -9,6 +10,7 @@ import org.junit.Test;
 public class AnonymousInnerClass {
 
     public static void main(String[] args) {
+        AnnotationConfigApplicationContext configApplicationContext = new AnnotationConfigApplicationContext();
         oldRunable();
         runable();
     }
