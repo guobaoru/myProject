@@ -45,7 +45,7 @@ public class NginxCount3 {
             e.printStackTrace();
         }
 
-        OutputStream stream = new FileOutputStream("D:\\count\\CC系统多权限访问_20190308_02.txt");
+        OutputStream stream = new FileOutputStream("D:\\count\\log_20190308_02.txt");
         OutputStreamWriter osw = new OutputStreamWriter(stream, "GBK");
         BufferedWriter writer = new BufferedWriter(osw);
 
