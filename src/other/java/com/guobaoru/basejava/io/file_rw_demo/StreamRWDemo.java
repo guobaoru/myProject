@@ -15,7 +15,10 @@ public class StreamRWDemo {
 
         StringBuilder sbd = new StringBuilder();
 
-        // try() 小括号内可关闭资源（流等）可随try结束自动释放
+        /**
+         * read
+         * try() 小括号内可关闭资源（流等）可随try结束自动释放
+         */
         try (Stream<String> lines = Files.lines(Paths.get("D:\\user1.csv"), Charset.forName("GBK"))) {
             lines.forEach(line -> {
                 System.out.println(line);
@@ -25,6 +28,9 @@ public class StreamRWDemo {
             e.printStackTrace();
         }
 
+        /**
+         * write
+         */
         Files.write(Paths.get("D:\\result.txt"), sbd.toString().getBytes("GBK"));
 
     }
