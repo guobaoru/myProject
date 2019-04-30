@@ -1,6 +1,6 @@
 package com.guobaoru;
 
-import java.util.HashMap;
+import java.util.Arrays;
 
 /**
  * @author Created by guobaoru.
@@ -10,9 +10,11 @@ public class Test {
 
     public static void main(String[] args) {
 
-        String str = "";
+        String str = "1,2,3,4";
 
-        HashMap hashMap = new HashMap();
+        Arrays.asList(str.split(",")).forEach(e -> {
+
+        });
 
     }
 

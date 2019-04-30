@@ -1,6 +1,7 @@
-package basejava.lambda.test;
+package com.guobaoru.basejava.lambda.test;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -20,9 +21,15 @@ public class App {
         transactions.add(new Transaction(2000, "CNY"));
         transactions.add(new Transaction(1800, "USD"));
         transactions.add(new Transaction(1400, "CNY"));
+        transactions.add(new Transaction(1400, "123"));
+        transactions.add(new Transaction(1400, "YES"));
 
-        Map<String, List<Transaction>> map = getTest(transactions);
-        System.out.println(map);
+        System.out.println(group(transactions));
+        System.out.println(sorted(transactions));
+        System.out.println(filter(transactions));
+//        System.out.println(map(transactions));
+        System.out.println(map2(transactions));
+        System.out.println(transactions);
     }
 
     /**
@@ -30,8 +37,44 @@ public class App {
      * @param transactions
      * @return
      */
-    private static Map<String, List<Transaction>> getTest(List<Transaction> transactions) {
+    private static Map<String, List<Transaction>> group(List<Transaction> transactions) {
         return transactions.stream().filter((Transaction transaction) ->
                 transaction.getPrice() > 1000).collect(Collectors.groupingBy(Transaction::getCurrency));
     }
+
+
+
+    private static List<Transaction> sorted(List<Transaction> transactions) {
+        return transactions.stream().sorted(Comparator.comparing(Transaction::getCurrency)).collect(Collectors.toList());
+    }
+
+
+    private static List<Transaction> filter(List<Transaction> transactions) {
+        return transactions.stream()
+                .filter(transaction -> transaction.getPrice() > 1000)
+                .filter(transaction -> transaction.getCurrency().contains("U"))
+                .collect(Collectors.toList());
+    }
+
+    private static List<Transaction> map(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> {
+                    transaction.setPrice(10001);
+                    transaction.setCurrency("synchronize");
+                    return transaction;
+                })
+                .collect(Collectors.toList());
+    }
+
+    private static List<Transaction> map2(List<Transaction> transactions) {
+        return transactions.stream()
+                .map(transaction -> {
+                    Transaction transaction1 = new Transaction(transaction.getPrice(), "synchronize");
+                    return transaction1;
+                })
+                .collect(Collectors.toList());
+    }
+
+
+
 }

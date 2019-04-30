@@ -6,6 +6,6 @@ package com.guobaoru.design.proxy.dynamic.jdkdynamic;
  */
 public interface Person {
 
-    void getName();
+    void getName(String familyName, String name);
 
 }

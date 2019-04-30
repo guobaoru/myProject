@@ -13,8 +13,11 @@ public class Test {
 
         Person proxy = (Person) Proxy.newProxyInstance(Student.class.getClassLoader(), Student.class.getInterfaces(), new StudentInvocationHandler(student));
 
-        proxy.getName();
+        proxy.getName("Guo", "Baoru Guo");
 
+        /**
+         * 不调用方法，System.out 输出也会调用增强逻辑
+         */
 //        System.out.println(proxy);
 
     }

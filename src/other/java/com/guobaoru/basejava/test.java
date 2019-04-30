@@ -25,8 +25,6 @@ public class test {
 
         System.out.println(a);
 
-
-
     }
 
     public static Double convertCurrencyUnit(Double original, Double diffMultiplier) {

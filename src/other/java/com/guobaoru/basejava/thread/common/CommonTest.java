@@ -9,6 +9,9 @@ import java.util.concurrent.*;
 public class CommonTest {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(5);
+        ExecutorService executor1 = Executors.newSingleThreadExecutor();
+        ExecutorService executor2 = Executors.newCachedThreadPool();
+        ExecutorService executor3 = Executors.newScheduledThreadPool(5);
 
         for (int i = 0; i < 10; i++) {
             executor.submit(new Runnable() {

@@ -1,4 +1,4 @@
-package basejava.thread.callable;
+package com.guobaoru.basejava.thread.callable;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

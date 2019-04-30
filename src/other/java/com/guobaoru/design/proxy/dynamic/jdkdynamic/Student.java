@@ -7,8 +7,8 @@ package com.guobaoru.design.proxy.dynamic.jdkdynamic;
 public class Student implements Person {
 
     @Override
-    public void getName() {
-        System.out.println("Please call me Mr.Guo");
+    public void getName(String familyName, String name) {
+        System.out.println("Please call me Mr." + familyName + ",my full name is " + name);
     }
 
 }

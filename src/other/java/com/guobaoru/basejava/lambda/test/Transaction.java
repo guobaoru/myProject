@@ -1,4 +1,4 @@
-package basejava.lambda.test;
+package com.guobaoru.basejava.lambda.test;
 
 /**
  * @author Created by guobaoru.
