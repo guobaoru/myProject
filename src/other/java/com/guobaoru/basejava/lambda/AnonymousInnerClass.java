@@ -1,6 +1,6 @@
 //package com.guobaoru.java.lambda;
 //
-//import org.junit.Test;
+//import org.junit.ConditionTest;
 //import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 //
 ///**
@@ -15,7 +15,7 @@
 //        runable();
 //    }
 //
-//    @Test
+//    @ConditionTest
 //    public static void oldRunable() {
 //        new Thread(new Runnable() {
 //            @Override
@@ -25,7 +25,7 @@
 //        }).start();
 //    }
 //
-//    @Test
+//    @ConditionTest
 //    public static void runable() {
 ////        new Thread(() -> System.out.println("It's a lambda function!")).start();
 //    }

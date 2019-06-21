@@ -1,4 +1,4 @@
-package basejava.io.nio;
+package com.guobaoru.basejava.io.nio;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

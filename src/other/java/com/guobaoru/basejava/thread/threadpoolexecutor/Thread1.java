@@ -1,4 +1,4 @@
-package com.guobaoru.basejava.thread;
+package com.guobaoru.basejava.thread.threadpoolexecutor;
 
 /**
  * @author Created by guobaoru.

@@ -1,4 +1,4 @@
-package com.guobaoru.basejava.thread;
+package com.guobaoru.basejava.thread.threadpoolexecutor;
 
 /**
  * @author Created by guobaoru.
@@ -10,7 +10,7 @@ package com.guobaoru.basejava.thread;
  * 一个时间内只能有一个线程得到执行。另一个线程必须等待当前线程执行完这个代码
  * 块以后才能执行该代码块。
  */
-public class Thread01 implements Runnable {
+public class Thread2 implements Runnable {
 
     @Override
     public void run() {
@@ -25,7 +25,7 @@ public class Thread01 implements Runnable {
     }
 
     public static void main(String[] args) {
-        Thread01 t01 = new Thread01();
+        Thread2 t01 = new Thread2();
 
         System.out.println("synchronized 关键字使用 \n--------------------------");
 

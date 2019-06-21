@@ -1,4 +1,4 @@
-package basejava;
+package com.guobaoru.basejava;
 
 import org.omg.PortableInterceptor.INACTIVE;
 
@@ -20,7 +20,6 @@ public class test {
 
     public static void main(String[] args) throws ParseException {
 
-
         String a = "123" + "456";
 
         System.out.println(a);
@@ -32,4 +31,5 @@ public class test {
         BigDecimal unit = new BigDecimal(diffMultiplier.toString());
         return ogl.divide(unit,10, BigDecimal.ROUND_HALF_UP).doubleValue();
     }
+
 }
