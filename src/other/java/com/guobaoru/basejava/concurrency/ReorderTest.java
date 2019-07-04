@@ -3,11 +3,12 @@ package com.guobaoru.basejava.concurrency;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * 指令重排的验证
  * @version 1.0
  * @author: guobaoru
  * @date: 2019/6/20 13:27
  */
-public class Test {
+public class ReorderTest {
 
     private static int x = 0, y = 0;
     private static int a = 0, b =0;

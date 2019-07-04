@@ -1,6 +1,7 @@
 package com.guobaoru;
 
-import java.util.Arrays;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * @author Created by guobaoru.
@@ -10,11 +11,20 @@ public class Test {
 
     public static void main(String[] args) {
 
-        String str = "1,2,3,4";
+        List list1 = new ArrayList();
+        List list2 = new ArrayList();
 
-        Arrays.asList(str.split(",")).forEach(e -> {
+        long l1 = System.currentTimeMillis();
+        for (int i = 0; i < 100; i++) {
+            list1.add("a");
+        }
+        System.out.println("第一次执行时间：" + (System.currentTimeMillis() - l1));
 
-        });
+        long l2 = System.currentTimeMillis();
+        for (int i = 0; i < 100; i++) {
+            list2.add(0, "a");
+        }
+        System.out.println("第二次执行时间：" + (System.currentTimeMillis() - l2));
 
     }
 
